@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+    <p><strong>(All Fields are required)</strong></p>
+
+    <form>
+       
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" maxlength="30" placeholder="Enter your full name" required> (Maximum 30 characters only)
+            </p>
+            
+            <p>
+                <label for="regno">Register Number:</label><br>
+                <input type="text" id="regno" name="regno" pattern="[A-Z]{3}[0-9]{2}[A-Z]{2}[0-9]{3}" placeholder="URK23CS001" required> (use pattern for matching regno URK23CS001 format)
+            </p>
+            
+            <p>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="sample@gmail.com" required>
+            </p>
+            
+            <p>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="*************" required>
+            </p>
+            
+            <p>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required>
+            </p>
+            
+            <p>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" min="17" max="21" required> (minimum 17 & maximum 21)
+            </p>
+            
+            <p>
+                <label for="time">Preferred Time:</label><br>
+                <input type="time" id="time" name="time" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+            
+            <p>
+                <label for="department">Department:</label><br>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>--Select Department--</option>
+                    <option value="cs">Computer Science</option>
+                    <option value="it">Information Technology</option>
+                    <option value="ece">ECE</option>
+                </select>
+            </p>
+            
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male" checked required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </p>
+            
+            <p>
+                <label>Skills:</label><br>
+                <input type="checkbox" id="html" name="skills" value="html" checked>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="css">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="skills" value="javascript">
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="python" name="skills" value="python">
+                <label for="python">Python</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            
+            <p>
+                <label for="resume">Upload Resume:</label><br>
+                <input type="file" id="resume" name="resume" required>
+            </p>
+            
+            <p>
+                <label for="portfolio">Portfolio Website:</label><br>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com" required>
+            </p>
+            
+            <p>
+                <label for="color">Favorite Color:</label><br>
+                <input type="color" id="color" name="color" value="#000000" required>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+
+</body>
+</html>
